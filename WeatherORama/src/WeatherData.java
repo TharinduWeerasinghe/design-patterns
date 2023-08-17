@@ -1,8 +1,44 @@
-public class WeatherData {
+import java.util.ArrayList;
+import java.util.List;
 
+public class WeatherData implements Subject{
+
+    private List<Observer> observers;
     private float temperature;
-    private float Humidity;
+    private float humidity;
     private float pressure;
+
+    public WeatherData(){
+        observers = new ArrayList<Observer>();
+    }
+
+    @Override
+    public void registerObserver(Observer o) {
+        observers.add(o);
+    }
+
+    @Override
+    public void removeObserver(Observer o) {
+        observers.remove(o);
+    }
+
+    @Override
+    public void notifyObservers() {
+        for (Observer observer : observers){
+            observer.update(temperature, humidity, pressure);
+        }
+    }
+
+    public void measurementChanged(){
+        notifyObservers();
+    }
+
+    public void setMeasurements(float temperature, float humidity, float pressure){
+        this.temperature = temperature;
+        this.humidity = humidity;
+        this.pressure = pressure;
+        measurementChanged();
+    }
 
     public float getTemperature() {
         return temperature;
@@ -13,11 +49,11 @@ public class WeatherData {
     }
 
     public float getHumidity() {
-        return Humidity;
+        return humidity;
     }
 
     public void setHumidity(float humidity) {
-        Humidity = humidity;
+        humidity = humidity;
     }
 
     public float getPressure() {
@@ -28,11 +64,12 @@ public class WeatherData {
         this.pressure = pressure;
     }
 
-    public void measurementsChanged(){
-        float temp = getTemperature();
-        float humidity = getHumidity();
-        float pressure = getPressure();
-
-        
-    }
+//    public void measurementsChanged(){
+//        float temp = getTemperature();
+//        float humidity = getHumidity();
+//        float pressure = getPressure();
+//
+//
+//
+//    }
 }
