@@ -15,9 +15,9 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement{
     }
 
     @Override
-    public void update(float temp, float hummidty, float pressure) {
-        this.temperature = temp;
-        this.humidity = hummidty;
+    public void update() {
+        this.temperature = weatherData.getTemperature();
+        this.humidity = weatherData.getHumidity();
         display();
     }
 }
