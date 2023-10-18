@@ -26,6 +26,8 @@ Implement the code by reading Head First Design Patterns
 
 •	This pattern is found in Java Swing, RxJava, JavaBeans, RMI, Cocoa, swift and JavaScript events.
 
+<br>
+## Decorator Pattern
 
 ### The Decorator Pattern enables you to enhance an object's functionality without changing its basic structure. It's a flexible way to increase functionality without making new objects.
 
