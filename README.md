@@ -1,6 +1,8 @@
 # Java Design Patterns
 Implement the code by reading Head First Design Patterns
 
+<hr>
+
 ## Observer Pattern
 
 ### The Observer Pattern defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
