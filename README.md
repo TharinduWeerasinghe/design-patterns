@@ -19,9 +19,18 @@ Implement the code by reading Head First Design Patterns
 
 ### Importants
 •	Widely used this pattern and used in libraries and frameworks.
-
 •	Subject update Observers using interface.
-
 •	Subject doesn’t know much about observer. Observers are loosely coupled.
-
 •	This pattern is found in Java Swing, RxJava, JavaBeans, RMI, Cocoa, swift and JavaScript events.
+
+
+### The Decorator Pattern enables you to enhance an object's functionality without changing its basic structure. It's a flexible way to increase functionality without making new objects.
+
+### Importants
+•	Inheritance is one type of extension; with this design, we can make changes without changing existing code.
+•	New behaviors can frequently be added at runtime using composition and delegation.
+•	This pattern enables the use of a collection of decorator classes to wrap concreate components.
+•	Decorators modify the actions of their components by introducing additional functionality both before and after the component's method calls.
+•	We can use any number of decorators to wrap a component.
+•	Decorators can add a lot of small items to our design, and their overuse can make it complex.
+
